@@ -33,7 +33,6 @@ def textcnn_net_multi_label(data,
     """
     init_bound = 0.1
     initializer = fluid.initializer.Uniform(low=-init_bound, high=init_bound)
-    #gradient_clip = fluid.clip.GradientClipByNorm(10.0)
     gradient_clip = None
     regularizer = fluid.regularizer.L2DecayRegularizer(
                                         regularization_coeff=1e-4)
@@ -59,7 +58,6 @@ def textcnn_net_multi_label(data,
         win_sizes = [1, 2, 3]
 
     # embedding layer
-
     emb = fluid.embedding(input=data, size=[dict_dim, emb_dim], param_attr=seg_param_attrs)
 
     # convolution layer
