@@ -26,7 +26,6 @@ def textcnn_net_multi_label(data,
             class_dim=2,
             win_sizes=None,
             is_infer=False,
-            threshold=0.5,
             max_seq_len=100):
     """
     multi labels Textcnn_net 
