@@ -17,7 +17,7 @@
 import paddle.fluid as fluid
 import paddle
 
-def textcnn_net_multi_label(data,
+def textcnn_net(data,
             label,
             dict_dim,
             emb_dim=128,
